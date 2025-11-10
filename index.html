@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="menu-kasir">
+    <div class="logo">
+        <h1 class="head-logo">Program Kasir Sederhana</h1>
+    </div>
+    <div class="listing">
+        <label for="harga">Harga Barang: </label> <br>
+        <input type="text" id="harga"><br>
+    </div>
+
+    <div class="listing">
+        <label for="jumlah">Jumlah Belanja: </label> <br>
+        <input type="text" id="jumlah"><br>
+    </div>
+
+    <button onclick = "hitungTotalBelanja()">Harga Total</button>
+
+    <div class="output">
+        <p id="diskonText"></p>
+        <p id="totalBelanja"></p>
+    </div>
+
+</section>
+<script>
+    function hitungTotalBelanja(){
+        let harga = document.getElementById("harga").value;
+        let jumlah = document.getElementById("jumlah").value;
+        let diskonText = document.getElementById("diskonText");
+        let totalBelanja = document.getElementById("totalBelanja");
+        
+        let hitungTotalBelanja = (harga * jumlah);
+        
+        if (hitungTotalBelanja > 100000){
+            let potongan = (hitungTotalBelanja * 10/100);
+            hitungTotalBelanja = (hitungTotalBelanja - potongan)
+            diskonText.innerHTML = "Diskon: " + potongan;
+            totalBelanja.innerHTML = "Total Belanja: " + hitungTotalBelanja;
+        }
+    }
+</script>
+    
+</body>
+</html>

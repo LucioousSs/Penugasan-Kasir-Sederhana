@@ -1,0 +1,86 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: beige;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;   
+    margin: 0;
+}
+
+.menu-kasir {
+    width: auto;
+    height: 410px;
+    background-color: rgb(236, 200, 132);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    font-size: 15px;
+    color:rgba(0, 0, 0, 0.85);
+}
+
+.listing {
+    font-weight: 400;
+    font-size: 17px;
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.listing label {
+    padding: 5px;
+}
+
+.listing input {
+    width: 90%;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 2px
+}
+
+.menu-kasir button {
+    text-align: center;
+    width: 90%;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    padding: 5px
+}
+
+.menu-kasir button:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.output {
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+#diskonText {
+    padding: -5px;
+    margin-top: 5px;
+}
+
+#totalBelanja {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+
+
+
+
