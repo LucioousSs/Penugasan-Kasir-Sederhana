@@ -31,19 +31,28 @@
 </section>
 <script>
     function hitungTotalBelanja(){
-        let harga = document.getElementById("harga").value;
-        let jumlah = document.getElementById("jumlah").value;
+        let harga = Number(document.getElementById("harga").value);
+        let jumlah = Number(document.getElementById("jumlah").value);
         let diskonText = document.getElementById("diskonText");
         let totalBelanja = document.getElementById("totalBelanja");
-        
-        let hitungTotalBelanja = (harga * jumlah);
-        
-        if (hitungTotalBelanja > 100000){
-            let potongan = (hitungTotalBelanja * 10/100);
-            hitungTotalBelanja = (hitungTotalBelanja - potongan)
-            diskonText.innerHTML = "Diskon: " + potongan;
-            totalBelanja.innerHTML = "Total Belanja: " + hitungTotalBelanja;
+
+        if (isNaN(harga) || isNaN(jumlah) || harga <= 0 || jumlah <= 0) {
+            diskonText.innerHTML = "";
+            totalBelanja.innerHTML = "Isi harga dan jumlah belanja terlebih dahulu.";
+            return;
         }
+
+        let total = harga * jumlah;
+        let potongan = 0;
+
+        if (total > 100000){
+            potongan = total * 10/100;
+            total = total - potongan;
+        }
+
+        diskonText.innerHTML = potongan > 0 ? "Diskon: " + potongan : "";
+
+        totalBelanja.innerHTML = "Total Belanja: " + total;
     }
 </script>
     
